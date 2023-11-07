@@ -49,7 +49,7 @@ Mobile App Dev - App Brainstorming (Group 39)
    - **Scope:** Difficult to find out criteria to order the restaurants on the recommendation list. It will be interesting to work on unsupervised learning that could offer recommended systems based on users' preferences, past visitors' feedback, etc.
 
 ## Final New App Idea
-**Currency converter**
+**Currency converter** (Name: **Coinventor**)
 
 
 
