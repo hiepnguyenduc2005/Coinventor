@@ -70,7 +70,7 @@ Required Feature
 <!-- Add picture of your hand sketched wireframes in this section -->
 <img src="https://imgur.com/OJIA4Oq" width=600>
 
-![](https://imgur.com/OJIA4Oq)
+[https://imgur.com/OJIA4Oq](https://imgur.com/OJIA4Oq)
 
 
 ### [BONUS] Digital Wireframes & Mockups
