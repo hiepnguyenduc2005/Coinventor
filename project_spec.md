@@ -1,4 +1,4 @@
-# **APP_NAME_HERE**
+# **Coinverter**
 
 ## Table of Contents
 
@@ -11,18 +11,18 @@
 
 ### Description 
 
-**Description of your app**
+**An app that allows user to convert from one currency to another with current rate.**
 
 ### App Evaluation
 
 <!-- Evaluation of your app across the following attributes -->
 
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Finance, Tourism
+- **Mobile:** Quick access to currency conversion. No need to google search and scroll through a list of converters. An all-in-one app that allows users to select from a drop-down list of areas and compare rates. 
+- **Story:** Creates a verified and reliable conversion of money between two different currencies, allows user to choose currency of input and output, prompt the amount of money, and click to see the result.
+- **Market:** Frequent travelers, everyone, international.
+- **Habit:**  Moderate habit-forming. A user may use this app frequently during a trip to check the conversion rates before purchasing something. 
+- **Scope:** How many currencies we should include, deal with two inputs at the same time (amount of money and currency).
 
 ## Product Spec
 
@@ -30,36 +30,48 @@
 
 Required Features:
 
-- **fill in here**
-- ...
+- User can select 2 countries or areas from a menu
+- User can click button to generate the conversion rate
+- User can save currency conversion results
+
 
 Stretch Features:
 
-- **fill in here**
-- ...
+- Cryptocurrency Converter View 
+
 
 ### 2. Chosen API(s)
 
-- **list first API endpoint here**
-  - **list associated required feature here**
-  - ...
-- ...
+- Get Area
+
+    - User can select a specific area from the drop-down menu
+  -  User can input the specific amount from that area to be converted
+  - User selects a second specific area from the drop-down menu
+
+- Get Conversion
+  - User then clicks a button to convert the first area to the second area currency. Results displayed to the screen.
 
 ### 3. User Interaction
 
 Required Feature
 
-- **list first user action here**
-  - => **list result of user action here**
-  - ...
-- **list second user action here**
-  - => **list result of user action here**
-  - ...
+- Get Area
+    -  User can select a specific area from the drop-down menu →  User can then input the specific amount from that area to be converted
+  
+- Get Area
+    -  User selects a second specific area from the drop-down menu
+
+ - Get Conversion
+      - User then clicks a button to convert the first area to the second area currency. Results displayed to the screen.
+  
 
 ## Wireframes
 
 <!-- Add picture of your hand sketched wireframes in this section -->
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://imgur.com/OJIA4Oq" width=600>
+
+[https://imgur.com/OJIA4Oq](https://imgur.com/OJIA4Oq)
+
 
 ### [BONUS] Digital Wireframes & Mockups
 
@@ -74,7 +86,7 @@ For Milestone 2, include **2+ Videos/GIFs** of the build process here!
 
 ## License
 
-Copyright **yyyy** **your name**
+Copyright **2023** **Group 39**
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
