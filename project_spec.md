@@ -66,11 +66,11 @@ Required Feature
       - User then clicks a button to convert the first area to the second area currency. Results displayed to the screen.
   
 **Roles**
-Brian - Converter page UI, API
-Dantes - Recycler view page for country
-Hiep - Converter page UI  
-Steven - Recycler view page
-Ifeanyi - Github - Utility 
+- Brian - Converter page UI, API
+- Dantes - Recycler view page for country
+- Hiep - Converter page UI  
+- Steven - Recycler view page
+- Ifeanyi - Github - Utility 
 
 ## Wireframes
 
