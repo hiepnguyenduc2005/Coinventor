@@ -33,6 +33,7 @@ Required Features:
 - User can select 2 countries or areas from a menu
 - User can click button to generate the conversion rate
 - User can save currency conversion results
+- User can click a button to go to the next page which is a Recycler view 
 
 
 Stretch Features:
@@ -44,9 +45,9 @@ Stretch Features:
 
 - Get Area
 
-    - User can select a specific area from the drop-down menu
-  -  User can input the specific amount from that area to be converted
-  - User selects a second specific area from the drop-down menu
+- User can select a specific area from the drop-down menu
+- User can input the specific amount from that area to be converted
+- User selects a second specific area from the drop-down menu
 
 - Get Conversion
   - User then clicks a button to convert the first area to the second area currency. Results displayed to the screen.
@@ -64,6 +65,12 @@ Required Feature
  - Get Conversion
       - User then clicks a button to convert the first area to the second area currency. Results displayed to the screen.
   
+**Roles**
+Brian - Converter page UI, API
+Dantes - Recycler view page for country
+Hiep - Converter page UI  
+Steven - Recycler view page
+Ifeanyi - Github - Utility 
 
 ## Wireframes
 
