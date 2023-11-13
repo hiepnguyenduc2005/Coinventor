@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.codemath'
+    namespace 'com.example.coinvertor'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.codemath"
+        applicationId "com.example.coinvertor"
         minSdk 24
         targetSdk 33
         versionCode 1
