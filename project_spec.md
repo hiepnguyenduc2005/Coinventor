@@ -75,9 +75,8 @@ Required Feature
 ## Wireframes
 
 <!-- Add picture of your hand sketched wireframes in this section -->
-<img src="https://imgur.com/OJIA4Oq" width=600>
 
-[https://imgur.com/OJIA4Oq](https://imgur.com/OJIA4Oq)
+[Wireframe](https://imgur.com/OJIA4Oq)
 
 
 ### [BONUS] Digital Wireframes & Mockups
@@ -90,6 +89,7 @@ Here's a place for any other notes on the app, it's creation
 process, or what you learned this unit!  
 
 For Milestone 2, include **2+ Videos/GIFs** of the build process here!
+[Video](https://imgur.com/a/bc0S40Y.gif)
 
 ## License
 
