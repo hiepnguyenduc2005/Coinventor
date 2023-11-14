@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Direct Currency Converter</string>
     <string name="sign_up">Sign up</string>
-    <string name="currency">Coinverter</string>
+    <string name="currency1">Coin</string>
+    <string name="currency2">verter</string>
     <string name="dot">.</string>
     <string name="afn">AFN</string>
     <string name="refresh">refresh</string>
