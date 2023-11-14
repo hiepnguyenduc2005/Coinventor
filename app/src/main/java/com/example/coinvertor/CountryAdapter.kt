@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.signature.ObjectKey
 
-class CountryAdapter(private val countryList: MutableList<MainActivity.Country>): RecyclerView.Adapter<CountryAdapter.ViewHolder>(){
+class CountryAdapter(private val countryList: MutableList<Country>): RecyclerView.Adapter<CountryAdapter.ViewHolder>(){
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val countryImage: ImageView  = view.findViewById(R.id.country_image)
 
