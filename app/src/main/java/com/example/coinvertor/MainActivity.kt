@@ -1,16 +1,21 @@
 package com.example.coinvertor
 
-import android.R
 import android.content.Context
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
-import android.widget.ArrayAdapter
+import android.view.View
+import android.widget.AdapterView
+import android.widget.AutoCompleteTextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import com.example.coinvertor.databinding.ActivityMainBinding
+import okhttp3.Address
 import okhttp3.Headers
+import java.math.BigDecimal
 
 
 class MainActivity : AppCompatActivity() {
@@ -22,11 +27,11 @@ class MainActivity : AppCompatActivity() {
     private val rvCountry get() = binding.countryList
     private lateinit var adapter: CountryAdapter
     private val etFirstCurrency get() = binding.etFirstCurrency
-    private val spnFirstCountry get() = binding.spnFirstCountry
     private val btnConvert get() = binding.btnConvert
-    private val spnSecondCountry get() = binding.spnSecondCountry
     private val tvAutoCompleteFirstCountry get() = binding.tvAutoCompleteFirstCountry
+    private var selectedFirstCountry = ""
     private val tvAutoCompleteSecondCountry get() = binding.tvAutoCompleteSecondCountry
+    private var selectedSecondCountry = ""
     private val etSecondCurrency get() = binding.etSecondCurrency
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,39 +50,8 @@ class MainActivity : AppCompatActivity() {
         getCountryImageURL()
         getCurrencyList(this)
 
-        Log.d("Currency", "Number of currency codes here: ${currencyCodes.size}")
-    }
-
-    private fun getCurrencyList(context: Context) {
-        val client = AsyncHttpClient()
-
-        client["https://api.getgeoapi.com/v2/currency/list?api_key=06a05ff7963d1a714518316857b352a6a03b893c&format=json", object : JsonHttpResponseHandler() {
-            override fun onSuccess(statusCode: Int, headers: Headers, json: JsonHttpResponseHandler.JSON) {
-                val currencies = json.jsonObject.getJSONObject("currencies")
-                val currencyMap = mutableMapOf<String, String>()
-                currencies.keys().forEach { key ->
-                    currencyMap[key] = currencies[key].toString()
-                }
-                currencyList = currencyMap.map {(code, name) -> Currency(code, name)}
-                currencyCodes = currencyMap.map {(code) -> code}
-                Log.d("Currency", "Number of currencies: ${currencyList.size}")
-                Log.d("Currency", "Number of currency codes: ${currencyCodes.size}")
-                Log.d("Currency", "Response successful")
-
-                val adapter = CurrencyAdapter(context, currencyCodes)
-                tvAutoCompleteFirstCountry.setAdapter(adapter)
-                tvAutoCompleteSecondCountry.setAdapter(adapter)
-            }
-
-            override fun onFailure(
-                statusCode: Int,
-                headers: Headers?,
-                errorResponse: String,
-                throwable: Throwable?
-            ) {
-                Log.d("Currency Error", errorResponse)
-            }
-        }]
+        setOnCountrySelectedListener()
+        setOnConvertClickedListener()
     }
 
     private fun getCountryImageURL() {
@@ -127,6 +101,103 @@ class MainActivity : AppCompatActivity() {
                 throwable: Throwable?
             ) {
                 Log.d("Country Error", errorResponse)
+            }
+        }]
+
+    }
+
+    private fun getCurrencyList(context: Context) {
+        val client = AsyncHttpClient()
+
+        client["https://api.getgeoapi.com/v2/currency/list?api_key=06a05ff7963d1a714518316857b352a6a03b893c&format=json", object : JsonHttpResponseHandler() {
+            override fun onSuccess(statusCode: Int, headers: Headers, json: JsonHttpResponseHandler.JSON) {
+                val currencies = json.jsonObject.getJSONObject("currencies")
+                val currencyMap = mutableMapOf<String, String>()
+                currencies.keys().forEach { key ->
+                    currencyMap[key] = currencies[key].toString()
+                }
+                currencyList = currencyMap.map {(code, name) -> Currency(code, name)}
+                currencyCodes = currencyMap.map {(code) -> code}
+                Log.d("Currency", "Number of currencies: ${currencyList.size}")
+                Log.d("Currency", "Number of currency codes: ${currencyCodes.size}")
+                Log.d("Currency", "Response successful")
+
+                val adapter = CurrencyAdapter(context, currencyCodes)
+                tvAutoCompleteFirstCountry.setAdapter(adapter)
+                tvAutoCompleteSecondCountry.setAdapter(adapter)
+            }
+
+            override fun onFailure(
+                statusCode: Int,
+                headers: Headers?,
+                errorResponse: String,
+                throwable: Throwable?
+            ) {
+                Log.d("Currency Error", errorResponse)
+            }
+        }]
+    }
+
+    private fun setOnCountrySelectedListener(){
+        tvAutoCompleteFirstCountry.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(charSequence: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(charSequence: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun afterTextChanged(editable: Editable?) {
+                selectedFirstCountry = editable.toString()
+            }
+        })
+
+        tvAutoCompleteSecondCountry.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(charSequence: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun onTextChanged(charSequence: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+            override fun afterTextChanged(editable: Editable?) {
+                selectedSecondCountry = editable.toString()
+            }
+        })
+    }
+
+    private fun setOnConvertClickedListener() {
+        btnConvert.setOnClickListener {
+            convert()
+        }
+    }
+
+    private fun convert() {
+        val client = AsyncHttpClient()
+        val amount = BigDecimal(etFirstCurrency.text.toString())
+
+        client["https://api.getgeoapi.com/v2/currency/convert" +
+                "?api_key=06a05ff7963d1a714518316857b352a6a03b893c" +
+                "&from=${selectedFirstCountry}" +
+                "&to=${selectedSecondCountry}" +
+                "&amount=${amount}" +
+                "&format=json", object : JsonHttpResponseHandler() {
+            override fun onSuccess(statusCode: Int, headers: Headers, json: JsonHttpResponseHandler.JSON) {
+                val conversion = json.jsonObject.getJSONObject("rates").getJSONObject(selectedSecondCountry)["rate_for_amount"]
+                etSecondCurrency.text = "$conversion"
+                Log.d("Conversion", "conversion output: $conversion")
+                Log.d("Conversion", "Response successful")
+            }
+
+            override fun onFailure(
+                statusCode: Int,
+                headers: Headers?,
+                errorResponse: String,
+                throwable: Throwable?
+            ) {
+                Log.d("Conversion Error", errorResponse)
             }
         }]
 
