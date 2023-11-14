@@ -11,11 +11,11 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/currency"
+        android:text="@string/currency1"
         android:textColor="@color/main_blue"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -24,12 +24,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/currency2"
+        android:textColor="@color/dark_red"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toEndOf="@id/textView1"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/etFirstCurrency"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/edit_text_input_with_border"
         android:ellipsize="start"
@@ -42,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"
         tools:ignore="LabelFor" />
 
 
@@ -51,7 +64,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="30dp"
         android:hint="From"
         android:orientation="vertical"
         app:layout_constraintHorizontal_bias="0.487"
@@ -61,11 +74,12 @@
         app:layout_constraintWidth_percent="0.9">
 
         <AutoCompleteTextView
-            android:id="@+id/tvAutoCompleteFirstCountry"
+            android:id="@+id/designSpinner"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="none"
-            android:text="First Country"
+            android:text="Country (Input)"
             tools:layout_editor_absoluteX="21dp"
             tools:layout_editor_absoluteY="244dp" />
 
@@ -77,7 +91,7 @@
         android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/btn_main_round"
         android:text="@string/convert"
@@ -94,13 +108,12 @@
             android:id="@+id/spnSecondCountry"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnConvert"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintWidth_percent="0.9"
             app:layout_constraintVertical_bias="0.15"
             android:hint="To"
@@ -108,11 +121,11 @@
             >
 
         <AutoCompleteTextView
-            android:id="@+id/tvAutoCompleteSecondCountry"
+            android:id="@+id/design1Spinner"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="none"
-            android:text="Second Country" />
+            android:text="Country (Output)" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -136,8 +149,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/lytResult"
             android:layout_marginStart="40dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.896"
             app:layout_constraintStart_toStartOf="parent"
@@ -183,13 +196,13 @@
             tools:ignore="LabelFor" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/countryList"
+        android:id="@+id/country_list"
         android:layout_width="391dp"
         android:layout_height="72dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSecondCurrency" />
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
