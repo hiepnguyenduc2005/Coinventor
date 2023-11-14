@@ -61,7 +61,7 @@
         app:layout_constraintWidth_percent="0.9">
 
         <AutoCompleteTextView
-            android:id="@+id/designSpinner"
+            android:id="@+id/tvAutoCompleteFirstCountry"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="none"
@@ -108,7 +108,7 @@
             >
 
         <AutoCompleteTextView
-            android:id="@+id/design1Spinner"
+            android:id="@+id/tvAutoCompleteSecondCountry"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="none"
@@ -183,13 +183,13 @@
             tools:ignore="LabelFor" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/country_list"
+        android:id="@+id/countryList"
         android:layout_width="391dp"
         android:layout_height="72dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSecondCurrency" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
