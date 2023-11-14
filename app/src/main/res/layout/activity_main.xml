@@ -74,7 +74,7 @@
         app:layout_constraintWidth_percent="0.9">
 
         <AutoCompleteTextView
-            android:id="@+id/designSpinner"
+            android:id="@+id/tvAutoCompleteFirstCountry"
 
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -121,7 +121,7 @@
             >
 
         <AutoCompleteTextView
-            android:id="@+id/design1Spinner"
+            android:id="@+id/tvAutoCompleteSecondCountry"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:inputType="none"
