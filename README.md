@@ -43,9 +43,9 @@ The following EXTRA features are implemented:
 
 Here's a video that demos all of the app's implemented features: 
 
-<img src='https://imgur.com/a/bc0S40Y.gif' title='Video Demo' width='' alt='Video Demo' />
+[Video Demo]('https://imgur.com/a/bc0S40Y.gif')
 
-VIDEO created with **your chosen video tool**
+VIDEO created with **Android Studio**
 
 ## Notes
 
