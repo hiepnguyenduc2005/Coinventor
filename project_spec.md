@@ -89,7 +89,9 @@ Here's a place for any other notes on the app, it's creation
 process, or what you learned this unit!  
 
 For Milestone 2, include **2+ Videos/GIFs** of the build process here!
-[Video](https://imgur.com/a/bc0S40Y.gif)
+
+[Video 1](https://imgur.com/a/bc0S40Y.gif)
+[Video 2](https://youtu.be/r2dSU-ZyJME)
 
 ## License
 
