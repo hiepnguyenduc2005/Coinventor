@@ -43,7 +43,7 @@ The following EXTRA features are implemented:
 
 Here's a video that demos all of the app's implemented features: 
 
-[Video Demo](https://imgur.com/a/bc0S40Y.gif)
+https://youtu.be/r2dSU-ZyJME
 
 VIDEO created with **Android Studio**
 
