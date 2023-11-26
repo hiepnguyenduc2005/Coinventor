@@ -12,7 +12,7 @@
   * Click on ```Create Virtual Device...,``` pick a device definition (e.g., Pixel 4), and select a system image (e.g., Android 11.0).
   * Complete the emulator setup.
 * **Run the Coinventor App:**
-  * Select the Coinventor app configuration in the run configurations dropdown at the top.
+  * Select the **Coinventor** app configuration in the run configurations dropdown at the top.
   * Choose the newly created emulator as your target device.
   * Click the ```Run``` button to build and run the app. The emulator will start, and the Coinventor app will launch on it once it's ready.
 _Note:_ Make sure you have the latest Android Studio and Android SDK. Running an emulator requires substantial system resources.
@@ -21,7 +21,7 @@ _Note:_ Make sure you have the latest Android Studio and Android SDK. Running an
 ### Introduction
 **Coinventor** is the final project of *CodePath* **AND 101 - Intro to Android Development** and an app that allows users to convert from one currency to another with the current rate.
 
-![image](https://github.com/hiepnguyenduc2005/Positive-vs-Negative/assets/130782979/ab26a979-86fa-4730-8ccd-f5fe9c188cfe)
+![image](https://github.com/hiepnguyenduc2005/Coinventor/assets/130782979/1d12618c-08e5-45d6-a69a-2c81d6ec2854)
 
 ### Features
 At its core, the **Positive vs. Negative** program delves into the fascinating field of sentiment analysis, a subdomain of AI and NLP. Sentiment analysis involves using machine learning techniques to discern and understand the emotions, attitudes, and opinions conveyed through text. By employing Transformer models, which have revolutionized NLP, this project possesses the ability to not just interpret the text but also comprehend the underlying sense of others' messages. This endeavor holds profound importance, as it enables us to delve into the psyche of text authors, explore philosophical dimensions of communication, and conduct detailed studies on the nuances of authorship and expression. It places a strong emphasis on user safety, ensuring secure sign-in, and log-out procedures with hashed passwords. Additionally, it saves a history of user searches, allowing users to revisit their past analyses, highlights key sentimental words, and extracts top sentences. This unique feature aids users in quickly grasping the emotional essence of the content, making it an invaluable tool for both academics and everyday communication.
