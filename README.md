@@ -1,7 +1,7 @@
 # Coinventor
 ## Usage: 
-* **Video Demo:** [https://youtu.be/2GHb9TB7bJU/](https://youtu.be/r2dSU-ZyJME)
-* **Installation:**
+**Video Demo:** [https://youtu.be/2GHb9TB7bJU/](https://youtu.be/r2dSU-ZyJME)
+**Installation:**
 **1. Clone the Coinventor Repository:**
   * Open Android Studio and go to File -> New -> Project from Version Control.
   * In the dialog, select "Git" as the version control system and enter https://github.com/hiepnguyenduc2005/Coinventor into the URL field.
