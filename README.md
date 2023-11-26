@@ -21,7 +21,7 @@ _Note:_ Make sure you have the latest Android Studio and Android SDK. Running an
 ### Introduction
 **Coinventor** is the final project of *CodePath* **AND 101 - Intro to Android Development** and an app that allows users to convert from one currency to another with the current rate.
 
-![image](https://imgur.com/a/bc0S40Y.gif)
+![gif](https://imgur.com/a/bc0S40Y.gif)
 
 
 ### Features
