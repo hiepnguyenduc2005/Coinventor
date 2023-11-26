@@ -4,9 +4,9 @@
 
 **Installation:**
 * **Clone the Coinventor Repository:**
-  * Open Android Studio and go to File -> New -> Project from Version Control.
-  * In the dialog, select "Git" as the version control system and enter https://github.com/hiepnguyenduc2005/Coinventor into the URL field.
-  * Choose a directory for the project and click Clone.
+  * Open Android Studio and go to ```File -> New -> Project from Version Control```.
+  * In the dialog, select "Git" as the version control system and enter [https://github.com/hiepnguyenduc2005/Coinventor](https://github.com/hiepnguyenduc2005/Coinventor) into the URL field.
+  * Choose a directory for the project and click ```Clone```.
 * **Set Up an Android Emulator:**
   * After opening the project, navigate to Tools -> AVD Manager.
   * Click on Create Virtual Device..., pick a device definition (e.g., Pixel 4), and select a system image (e.g., Android 11.0).
