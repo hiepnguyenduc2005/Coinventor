@@ -2,7 +2,7 @@
 ## Usage: 
 * **Video Demo:** https://imgur.com/a/bc0S40Y.gif
 * **Installation:**
-1. **Clone the Coinventor Repository:**
+**1. Clone the Coinventor Repository:**
     - Open Android Studio and go to ```File -> New -> Project from Version Control```.
     - In the dialog, select "Git" as the version control system and enter [https://github.com/hiepnguyenduc2005/Coinventor](https://github.com/hiepnguyenduc2005/Coinventor) into the URL field.
     - Choose a directory for the project and click ```Clone```.
