@@ -8,13 +8,13 @@
   * In the dialog, select "Git" as the version control system and enter [https://github.com/hiepnguyenduc2005/Coinventor](https://github.com/hiepnguyenduc2005/Coinventor) into the URL field.
   * Choose a directory for the project and click ```Clone```.
 * **Set Up an Android Emulator:**
-  * After opening the project, navigate to Tools -> AVD Manager.
-  * Click on Create Virtual Device..., pick a device definition (e.g., Pixel 4), and select a system image (e.g., Android 11.0).
+  * After opening the project, navigate to ```Tools -> AVD Manager```.
+  * Click on ```Create Virtual Device...,``` pick a device definition (e.g., Pixel 4), and select a system image (e.g., Android 11.0).
   * Complete the emulator setup.
 * **Run the Coinventor App:**
   * Select the Coinventor app configuration in the run configurations dropdown at the top.
   * Choose the newly created emulator as your target device.
-  * Click the Run button to build and run the app. The emulator will start, and the Coinventor app will launch on it once it's ready.
+  * Click the ```Run``` button to build and run the app. The emulator will start, and the Coinventor app will launch on it once it's ready.
 _Note:_ Make sure you have the latest Android Studio and Android SDK. Running an emulator requires substantial system resources.
 
 ## Description
