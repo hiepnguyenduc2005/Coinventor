@@ -1,6 +1,7 @@
 # Coinventor
 ## Usage: 
 **Video Demo:** [https://youtu.be/2GHb9TB7bJU/](https://youtu.be/r2dSU-ZyJME)
+
 **Installation:**
 * **Clone the Coinventor Repository:**
   * Open Android Studio and go to File -> New -> Project from Version Control.
